@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    input,
+    button {
+      outline: none;
+    }
+
+    :root {
+      --main-color: #f0134d;
+      --secondary-color: #003f5c;
+      --white: #ffffff;
+      --size-h2: 25px;
+    }
+    body {
+      margin: 0px;
+      background-color: var(--main-color);
+      color: var(--white);
+      font-family: "Muli", sans-serif;
+    }
+    .header {
+      background-color: var(--main-color);
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header__img {
+      width: 200px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .header__menu {
+      margin-right: 30px; /* margin-rigth general*/
+    }
+
+    .header__menu ul {
+      display: none;
+      list-style: none;
+      padding: 0px;
+      position: absolute;
+      width: 100px;
+      text-align: right;
+      margin: 0px 0px 0px -14px;
+    }
+    .header__menu:hover ul,
+    ul:hover {
+      display: block;
+    }
+    .header__menu li {
+      margin: 10px 0;
+    }
+    .header__menu li a {
+      color: var(--white);
+      text-decoration: none;
+    }
+    .header__menu li a:hover {
+      text-decoration: underline;
+    }
+    .header__menu--profile {
+      margin-right: 8px;
+      /* width: 40px; */
+      display: flex;
+      align-items: center;
+    }
+    .header__menu--profile p {
+      margin: 0;
+    }
+    .header__menu--profile img {
+      margin-right: 8px;
+      width: 40px;
+    }
+
+    .main {
+      height: 300px;
+    }
+    .main__title {
+      font-size: var(--size-h2);
+    }
+    .input {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid var(--white);
+      border-radius: 80px;
+      font-size: 16px;
+      height: 50px;
+      padding: 0 20px;
+      width: 70%;
+    }
+    .input::placeholder {
+      color: var(--white);
+    }
+  </style>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        src="./assets/img/logo-platzi-video.png"
+        alt=""
+      />
+      <div class="header__menu">
+        <div class="header__menu--profile">
+          <img src="./assets/img/user.png" />
+          <p>Perfil</p>
+        </div>
+
+        <ul>
+          <li><a href="">Cuenta</a></li>
+          <li><a href="">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="main">
+      <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+      <input class="input" type="text" placeholder="Buscar.." />
+    </section>
+  </body>
+</html>
