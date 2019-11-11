@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.header {
+  outline: 1px solid magenta;
+  height: 3rem;
+}
+
+.container {
+  outline: 1px solid magenta;
+  display: flex;
+  height: inherit;
+}
+
+.aside {
+  outline: 1px solid magenta;
+  flex: 0 0 25%;
+}
+
+.content {
+  outline: 1px solid magenta;
+  flex: 1;
+}
+
+.footer {
+  outline: 1px solid magenta;
+  height: 6rem;
+  margin-top: auto;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  list-style: none;
+  flex: 1;
+  outline: 1px solid magenta;
+  line-height: 3rem;
+  text-align: center;
+  transition: flex 0.5s;
+  /*Truco para alinear los elementos: ponenrles un line.heigth de la misma altura que 
+  el conteedor padre, solo sirve cuando solo hay una linea de texto
+  */
+}
+
+.menu__item:hover {
+  flex: 8;
+}
+
+/*# sourceMappingURL=flex.css.map */

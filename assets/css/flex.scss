@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 16px;
+}
+.header {
+    outline: 1px solid magenta;
+
+//   background-color: red;
+  height: 3rem;
+}
+.container {
+    outline: 1px solid magenta;
+
+//   background-color: beige;
+  display: flex;
+  height: inherit;
+}
+.aside {
+    outline: 1px solid magenta;
+
+//   background-color: lawngreen;
+  flex: 0 0 25%;
+}
+
+.content {
+    outline: 1px solid magenta;
+
+//   background-color: pink;
+  flex: 1; //entender flex-grow flex-srimk  <_ es igual a flex: 0 0 75%;
+}
+.footer {
+  outline: 1px solid magenta;
+  //se dibuja por fuera del elemento, no afecta el tamaño ni a sus elementos hermanos
+//   background-color: green;
+  height: 6rem;
+  margin-top: auto;
+}
+
+.menu {
+    display: flex;
+    // flex-
+}
+
+.menu__item {
+    list-style: none;
+    flex: 1;
+    outline: 1px solid magenta;
+line-height: 3rem;
+text-align: center;
+transition: flex .5s;
+
+/*Truco para alinear los elementos: ponenrles un line.heigth de la misma altura que 
+el conteedor padre, solo sirve cuando solo hay una linea de texto
+*/
+}
+.menu__item:hover {
+  flex: 8;
+}

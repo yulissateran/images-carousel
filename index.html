@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<!-- 
+  TEST DE COMPONENTES: STORYBOOCK; no pude :(
+  Accesibilidad: Andi 
+tabindex: MDN DOCUMENTATION
+
+
+--><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,177 +15,32 @@
       href="https://fonts.googleapis.com/css?family=Muli&display=swap"
       rel="stylesheet"
     />
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+    <link rel="stylesheet" href="./assets/css/flex.css">
   </head>
-  <style>
-    input,
-    button {
-      outline: none;
-    }
+<body>
+  <header class="header">
+    <ul class="menu">
+      <li class="menu__item">Home</li>
+      <li class="menu__item">Home</li>
+      <li class="menu__item">Home</li>
+    </ul>
 
-    :root {
-      --main-color: #f0134d;
-      --secondary-color: #003f5c;
-      --white: #ffffff;
-      --size-h2: 25px;
-      --heigth-card: 250px;
-      --width-card: 200px;
-      --color-icopn-carousel-item-detail: #32BEA6;
-    }}body, * {
-      box-sizing: border-box;
-      margin: 0px;
-    }
-    body {
-      /* margin: 0px; */
-      background-color: var(--main-color);
-      color: var(--white);
-      font-family: "Muli", sans-serif;
-      /* box-sizing: border-box; */
-    }
-    .header {
-      background-color: var(--main-color);
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header__img {
-      width: 200px;
-      margin-top: 10px;
-      margin-left: 10px;
-    }
-    .header__menu {
-      margin-right: 30px; /* margin-rigth general*/
-    }
-
-    .header__menu ul {
-      display: none;
-      list-style: none;
-      padding: 0px;
-      position: absolute;
-      width: 100px;
-      text-align: right;
-      margin: 0px 0px 0px -14px;
-    }
-    .header__menu:hover ul,
-    ul:hover {
-      display: block;
-    }
-    .header__menu li {
-      margin: 10px 0;
-    }
-    .header__menu li a {
-      color: var(--white);
-      text-decoration: none;
-    }
-    .header__menu li a:hover {
-      text-decoration: underline;
-    }
-    .header__menu--profile {
-      margin-right: 8px;
-      /* width: 40px; */
-      display: flex;
-      align-items: center;
-    }
-    .header__menu--profile p {
-      margin: 0;
-    }
-    .header__menu--profile img {
-      margin-right: 8px;
-      width: 40px;
-    }
-
-    .main {
-      height: 300px;
-    }
-    .main__title {
-      font-size: var(--size-h2);
-    }
-    .input {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 2px solid var(--white);
-      border-radius: 80px;
-      font-size: 16px;
-      height: 50px;
-      padding: 0 20px;
-      width: 70%;
-    }
-    .input::placeholder {
-      color: var(--white);
-    }
-
-    .carousel {
-      width: 100%;
-      overflow: scroll;
-      padding: 30px;
-      position: relative;
-    }
-
-    .carousel__container {
-      white-space: nowrap;
-      margin: 70px 0;
-      padding-bottom: 10px;
-    }
-    .carousel-item {
-      background-color: palevioletred;
-      width: var(--width-card);
-      height: var(--heigth-card);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-right: 10px;
-      display: inline-block;
-      cursor: pointer;
-      transition: 450ms all;
-      transform-origin: center left;
-      position: relative;
-    }
-    .carousel-item:hover ~ .carousel-item {
-      transform: translate3d(100px,0,0);
-    }
-    .carousel__container:hover .carousel-item {
-      opacity: 0.3;
-    }
-    .carousel__container:hover .carousel-item:hover {
-     transform: scale(1.5);
-     opacity: 1;
-    }
-    .carousel-item__img {
-      width: var(--width-card);
-      height: var(--heigth-card);
-      object-fit: cover;;
-    }
-    .carousel-item__details {
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-      font-size: 10px;
-      opacity: 0;
-      transition: 450ms opacity;
-      padding: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-    align-items: flex-end;
-    }
-.carousel-item__details--subtitle {
-font-size: 8px;
-}
-    .carousel-item__details img {
-      width: 20px;
-      height: 20px;
-    }
-    .carousel-item:hover .carousel-item__details {
-      opacity: 1;
-    }
-  </style>
-  <body>
+  </header>
+  <main class="container">
+    <section class="content">
+        content
+  </section>
+<aside class="aside">aside</aside></main>
+  <footer class="footer">footer</footer>
+</body>
+  <!-- <body>
     <header class="header">
       <img
+      tabindex="0"
         class="header__img"
         src="./assets/img/logo-platzi-video.png"
-        alt=""
+        alt="Platzi vídeo"
       />
       <div class="header__menu">
         <div class="header__menu--profile">
@@ -192,113 +53,216 @@ font-size: 8px;
         </ul>
       </div>
     </header>
-    <main class="main">
+ <main class="main">
       <h2 class="main__title">¿Qué quieres ver hoy?</h2>
       <input class="input" type="text" placeholder="Buscar.." />
-    </main>
+    </main> 
+
+   <h2 class="categories__title">Mi lista</h2>
     <section class="carousel">
       <div class="carousel__container">
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
+          <img
+            src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="people"
+            class="carousel-item__img"
+          />
           <div class="carousel-item__details">
             <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
+              <img src="./assets/img/icons-play.png" alt="" /><img
+                src="./assets/img/icons-add.png"
+                alt=""
+              />
               <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
-          <div class="carousel-item__details">
-            <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
-              <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.pexels.com/photos/2832078/pexels-photo-2832078.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people" class="carousel-item__img">
-          <div class="carousel-item__details">
-            <div>
-              <img src="./assets/img/icons-play.png" alt=""><img src="./assets/img/icons-add.png" alt="">
-              <p class="carousel-item__details--title">Titulo descriptivo</p>
-              <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+              <p class="carousel-item__details--subtitle">
+                2019 16+ 114 minutos
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </body>
+    <section class="not-found">
+        <h1 class="not-found__title">404</h1>
+        <p class="not-found__subtitle">Página no encontrada</p>
+      </section> 
+   <section class="login">
+      <section class="login__container">
+    
+        <h2   tabindex="0">Inicia sesión</h2>
+        <form class="login__container--form">
+          <input aria-label="Correo" type="text" class="input" placeholder="Correo" />
+          <input aria-label="Contraseña" type="password" class="input" placeholder="Contraseña" />
+          <button class="button">Iniciar sesión</button>
+          <div class="login__container--remember-me">
+              <label for="rememberMe">
+                <input type="checkbox" id="rememberMe">
+                Recuérdame
+              </label>
+                <a href="">Olvidé mi contraseña</a>
+          </div>
+        </form>
+
+        <section class="login__container--social-media">
+          <div class="button button__login-google"><img src="./assets/img/google-icon.webp" alt="" />Inicia sesión con Google</div>
+          <div  class="button button__login-twitter"><img src="./assets/img/twitter-icon.webp" alt="" />Inicia sesión con   Twitter</div>
+        </section>
+        <p class="login__container--register">
+          No tienes ninguna cuenta
+          <a href="">Regístrate</a>
+        </p>
+      </section>
+    </section>
+   <section class="register">
+        <section class="register__container">
+          <h2>Regístrate</h2>
+          <form class="register__container--form">
+            <input type="text" class="input" placeholder="Correo" />
+            <input type="password" class="input" placeholder="Contraseña" />
+            <button class="button">Registrarme</button>
+          </form>
+          <p class="register__container--login">
+            <a href="">Iniciar sesión</a>
+          </p>
+        </section>
+      </section> 
+    <footer class="footer">
+      <a href="">Términos de uso</a>
+      <a href="">Declaración de privacidad</a>
+      <a href="">Centro de ayuda</a>
+    </footer>
+  </body> -->
 </html>
